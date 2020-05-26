@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlms:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/style.css}">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<title>Inicio</title>
+</head>
+<body>
+
+	<h1 th:text="${message}"></h1>
+
+	<input type="button" class="a" value="Ingresar Categoría" onclick="location.href='./categoria'" />
+	<input type="button" class="a" value="Ingresar Libro" onclick="location.href='./libro'" />
+	<input type="button" class="a" value="Ver Libros" onclick="location.href='./listado'" />
+
+</body>
+</html>

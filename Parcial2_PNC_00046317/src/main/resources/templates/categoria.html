@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlms:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" th:href="@{/style.css}">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Agregar Categoría</title>
+</head>
+<body>
+	
+	<h1>Guardar Categoría</h1>
+	<form method="post" th:action="@{/guardarCat}" th:object="${categoria}">
+		<label>Nombre Categoría:</label>
+		<input type="text" id="snombre" th:field="*{scategoria}">
+		<span th:errors="${categoria.scategoria}" style="color:  #E81505;"></span><br>
+		<input type="submit" value="Guardar">
+	</form>
+
+	<input type="button" class="a" value="Regresar" onclick="location.href='./index'" />
+</body>
+</html>
